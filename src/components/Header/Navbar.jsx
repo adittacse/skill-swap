@@ -62,8 +62,10 @@ const Navbar = () => {
             </div>
             <div className="navbar-end gap-5">
                 {
-                    user?.photoURL && <div className="w-10 rounded-full">
-                        <img className="rounded-full border-2" src={user?.photoURL} alt="Tailwind CSS Navbar component" />
+                    user?.photoURL && <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
+                        <div className="w-10 rounded-full">
+                            <img className="rounded-full border-2" src={user?.photoURL} alt="user image" />
+                        </div>
                     </div>
                 }
                 {
