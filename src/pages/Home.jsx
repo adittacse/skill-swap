@@ -1,6 +1,7 @@
 import React, {Suspense} from "react";
 import { useLoaderData } from "react-router";
 import PopularSkills from "../components/PopularSkills.jsx";
+import Loading from "../components/Loading.jsx";
 
 const Home = () => {
     const data = useLoaderData();
@@ -9,7 +10,7 @@ const Home = () => {
         <div>
             {/*hero slider*/}
             {/*popular skills*/}
-            <Suspense fallback={<p>Loading...</p>}>
+            <Suspense fallback={<Loading />}>
                 <PopularSkills data={data} />
             </Suspense>
             {/*top-rated provider*/}

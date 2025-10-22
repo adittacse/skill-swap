@@ -3,6 +3,7 @@ import Root from "../layouts/Root.jsx";
 import Home from "../pages/Home.jsx";
 import Signup from "../pages/Signup.jsx";
 import Login from "../pages/Login.jsx";
+import Loading from "../components/Loading.jsx";
 
 const Router = createBrowserRouter([
     {
@@ -12,7 +13,8 @@ const Router = createBrowserRouter([
             {
                 index: true,
                 loader: () => fetch("/course.json"),
-                element: <Home />
+                element: <Home />,
+                hydrateFallbackElement: <Loading />
             },
             {
                 path: "signup",
