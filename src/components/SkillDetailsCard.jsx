@@ -22,7 +22,7 @@ const SkillDetailsCard = ({ skillDetails }) => {
     const handleBookSession = (e) => {
         e.preventDefault();
         toast.success("Booking submitted!");
-        // e.target.reset();
+        e.target.reset();
     };
 
     return (
