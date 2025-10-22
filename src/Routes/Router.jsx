@@ -6,6 +6,8 @@ import Login from "../pages/Login.jsx";
 import Loading from "../components/Loading.jsx";
 import SkillDetails from "../pages/SkillDetails.jsx";
 import PrivateRoute from "./PrivateRoute.jsx";
+import MyProfile from "../pages/MyProfile.jsx";
+import UpdateProfile from "../pages/UpdateProfile.jsx";
 
 const Router = createBrowserRouter([
     {
@@ -31,6 +33,16 @@ const Router = createBrowserRouter([
                 loader: () => fetch("/course.json"),
                 element: <PrivateRoute><SkillDetails /></PrivateRoute>,
                 hydrateFallbackElement: <Loading />
+            },
+            {
+                path: "my-profile",
+                loader: () => fetch("/course.json"),
+                element: <PrivateRoute><MyProfile /></PrivateRoute>,
+                hydrateFallbackElement: <Loading />
+            },
+            {
+                path: "my-profile/update",
+                element: <PrivateRoute><UpdateProfile /></PrivateRoute>,
             },
             {
                 path: "*",

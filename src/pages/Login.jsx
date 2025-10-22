@@ -49,10 +49,10 @@ const Login = () => {
                         <fieldset className="fieldset">
                             {/*email*/}
                             <label className="label">Email</label>
-                            <input name="email" type="email" className="input" placeholder="Email"/>
+                            <input name="email" type="email" className="input" placeholder="Email" required/>
                             {/*password*/}
                             <label className="label">Password</label>
-                            <input name="password" type="password" className="input" placeholder="Password"/>
+                            <input name="password" type="password" className="input" placeholder="Password" required/>
                             <button className="btn btn-neutral mt-4">Login</button>
                         </fieldset>
                     </form>

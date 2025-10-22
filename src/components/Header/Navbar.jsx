@@ -31,9 +31,9 @@ const Navbar = () => {
             </NavLink>
         }
         {
-            user && <NavLink to="/profile">
+            user && <NavLink to="/my-profile">
                 {({isActive}) => (
-                    <span className={isActive ? "active" : ""}>Profile</span>
+                    <span className={isActive ? "active" : ""}>My Profile</span>
                 )}
             </NavLink>
         }
