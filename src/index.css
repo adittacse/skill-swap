@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+.maven-pro {
+    font-family: "Maven Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
