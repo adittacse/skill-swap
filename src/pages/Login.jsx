@@ -1,10 +1,12 @@
 import { useContext, useRef, useState } from "react";
 import AuthContext from "../contexts/AuthContext/AuthContext.jsx";
 import { Link, Navigate, useLocation, useNavigate } from "react-router";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
     const [success, setSuccess] = useState("");
     const [error, setError] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
     const { userSignIn, setUser, googleSignIn } = useContext(AuthContext);
     const emailRef = useRef(null);
     const location = useLocation();
@@ -41,6 +43,11 @@ const Login = () => {
             })
     }
 
+    const handleTogglePasswordShow = (e) => {
+        e.preventDefault();
+        setShowPassword(!showPassword);
+    }
+
     const handleGoForgotPassword = () => {
         navigate("/forgot-password", {
             state: { email: emailRef.current?.value || "" }
@@ -59,7 +66,13 @@ const Login = () => {
                             <input ref={emailRef} name="email" type="email" className="input" placeholder="Email" required/>
                             {/*password*/}
                             <label className="label">Password</label>
-                            <input name="password" type="password" className="input" placeholder="Password" required/>
+                            <div className="relative">
+                                <label className="label">Password</label>
+                                <input name="password" type={showPassword ? "text" : "password"} className="input" placeholder="Password" required />
+                                <button onClick={handleTogglePasswordShow} className="btn btn-xs top-6 right-5 absolute">
+                                    { showPassword ? <FaEyeSlash />: <FaEye /> }
+                                </button>
+                            </div>
                             <button className="btn btn-neutral mt-4">Login</button>
                         </fieldset>
                     </form>

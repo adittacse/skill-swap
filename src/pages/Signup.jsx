@@ -1,10 +1,12 @@
 import { useContext, useState } from "react";
 import AuthContext from "../contexts/AuthContext/AuthContext.jsx";
 import { Link, useNavigate } from "react-router";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Signup = () => {
     const [success, setSuccess] = useState("");
     const [error, setError] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
     const { createUser, updateUser, setUser } = useContext(AuthContext);
     const navigate = useNavigate();
 
@@ -39,6 +41,11 @@ const Signup = () => {
             });
     }
 
+    const handleTogglePasswordShow = (e) => {
+        e.preventDefault();
+        setShowPassword(!showPassword);
+    }
+
     return (
         <div className="flex justify-center">
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
@@ -57,7 +64,13 @@ const Signup = () => {
                             <input name="email" type="email" className="input" placeholder="Email"/>
                             {/*password*/}
                             <label className="label">Password</label>
-                            <input name="password" type="password" className="input" placeholder="Password"/>
+                            <div className="relative">
+                                <label className="label">Password</label>
+                                <input name="password" type={showPassword ? "text" : "password"} className="input" placeholder="Password" required />
+                                <button onClick={handleTogglePasswordShow} className="btn btn-xs top-6 right-5 absolute">
+                                    { showPassword ? <FaEyeSlash />: <FaEye /> }
+                                </button>
+                            </div>
                             <button className="btn btn-neutral mt-4">Register</button>
                         </fieldset>
                     </form>
