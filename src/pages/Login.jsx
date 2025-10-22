@@ -1,11 +1,13 @@
 import { useContext, useState } from "react";
 import AuthContext from "../contexts/AuthContext/AuthContext.jsx";
-import { Link } from "react-router";
+import { Link, Navigate, useLocation, useNavigate } from "react-router";
 
 const Login = () => {
     const [success, setSuccess] = useState("");
     const [error, setError] = useState("");
     const { userSignIn, setUser, googleSignIn } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleSignIn = (e) => {
         e.preventDefault();
@@ -19,6 +21,7 @@ const Login = () => {
             .then(result => {
                 setUser(result.user);
                 setSuccess("Signed in successfully!");
+                navigate(`${location.state ? location.state : "/"}`);
             })
             .catch(error => {
                 setError(error);
@@ -30,6 +33,7 @@ const Login = () => {
             .then(result => {
                 setUser(result.user);
                 setSuccess("Signed in successfully!");
+                navigate(`${location.state ? location.state : "/"}`);
             })
             .catch(error => {
                 setError(error.message);

@@ -4,6 +4,8 @@ import Home from "../pages/Home.jsx";
 import Signup from "../pages/Signup.jsx";
 import Login from "../pages/Login.jsx";
 import Loading from "../components/Loading.jsx";
+import SkillDetails from "../pages/SkillDetails.jsx";
+import PrivateRoute from "./PrivateRoute.jsx";
 
 const Router = createBrowserRouter([
     {
@@ -23,6 +25,12 @@ const Router = createBrowserRouter([
             {
                 path: "login",
                 element: <Login />
+            },
+            {
+                path: "skill/:id",
+                loader: () => fetch("/course.json"),
+                element: <PrivateRoute><SkillDetails /></PrivateRoute>,
+                hydrateFallbackElement: <Loading />
             },
             {
                 path: "*",

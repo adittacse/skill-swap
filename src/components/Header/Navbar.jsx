@@ -1,10 +1,10 @@
-import {Link, NavLink, useNavigate} from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 import "./Navbar.css";
-import {useContext} from "react";
+import { useContext } from "react";
 import AuthContext from "../../contexts/AuthContext/AuthContext.jsx";
 
 const Navbar = () => {
-    const {user, userSignOut} = useContext(AuthContext);
+    const { user, userSignOut } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const handleSignOut = () => {
@@ -39,7 +39,7 @@ const Navbar = () => {
         }
     </>
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar bg-base-100 shadow-sm ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -49,9 +49,7 @@ const Navbar = () => {
                                   d="M4 6h16M4 12h8m-8 6h16"/>
                         </svg>
                     </div>
-                    <ul
-                        tabIndex="-1"
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                    <ul tabIndex="-1" className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                         {links}
                     </ul>
                 </div>
@@ -64,8 +62,8 @@ const Navbar = () => {
             </div>
             <div className="navbar-end gap-5">
                 {
-                    user && <div className="w-10 rounded-full">
-                        <img className="rounded-full border-2" alt="Tailwind CSS Navbar component" src={user?.photoURL}/>
+                    user?.photoURL && <div className="w-10 rounded-full">
+                        <img className="rounded-full border-2" src={user?.photoURL} alt="Tailwind CSS Navbar component" />
                     </div>
                 }
                 {
