@@ -1,9 +1,20 @@
-import React from "react";
+import React, {Suspense} from "react";
+import { useLoaderData } from "react-router";
+import PopularSkills from "../components/PopularSkills.jsx";
 
 const Home = () => {
+    const data = useLoaderData();
+
     return (
         <div>
-            <h2>Home Page</h2>
+            {/*hero slider*/}
+            {/*popular skills*/}
+            <Suspense fallback={<p>Loading...</p>}>
+                <PopularSkills data={data} />
+            </Suspense>
+            {/*top-rated provider*/}
+            {/*how it works*/}
+            {/*personal extra section*/}
         </div>
     );
 };

@@ -9,7 +9,12 @@ const Router = createBrowserRouter([
         children: [
             {
                 index: true,
+                loader: () => fetch("/course.json"),
                 element: <Home />
+            },
+            {
+                path: "*",
+                element: <p>404 Not Found</p>
             }
         ]
     }

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "skillName": "HTML & CSS Fundamentals",
+    "providerName": "Nusrat Jahan",
+    "providerEmail": "nusrat@skillswap.com",
+    "price": 8,
+    "rating": 4.6,
+    "slotsAvailable": 6,
+    "description": "Start from zero: semantic HTML, responsive layouts, Flexbox, and CSS Grid. Build a small landing page by the end.",
+    "image": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1200&auto=format&fit=crop",
+    "category": "Web Development"
+  },
+  {
+    "id": 2,
+    "skillName": "JavaScript Basics to ES6",
+    "providerName": "Arif Ahmed",
+    "providerEmail": "arif@skillswap.com",
+    "price": 12,
+    "rating": 4.7,
+    "slotsAvailable": 5,
+    "description": "Variables, functions, arrays, objects, and modern ES6 features with short exercises and quizzes.",
+    "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop",
+    "category": "Programming"
+  },
+  {
+    "id": 3,
+    "skillName": "React Beginner Workshop",
+    "providerName": "Sabbir Hossain",
+    "providerEmail": "sabbir@skillswap.com",
+    "price": 15,
+    "rating": 4.8,
+    "slotsAvailable": 4,
+    "description": "Components, props, state, event handling, and React Router—build a simple SPA from scratch.",
+    "image": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop",
+    "category": "Frontend"
+  },
+  {
+    "id": 4,
+    "skillName": "Node.js & Express API Basics",
+    "providerName": "Tahmid Hasan",
+    "providerEmail": "tahmid@skillswap.com",
+    "price": 14,
+    "rating": 4.5,
+    "slotsAvailable": 5,
+    "description": "REST fundamentals, routing, middleware, and CRUD examples on localhost (no external DB required).",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
+    "category": "Backend"
+  },
+  {
+    "id": 5,
+    "skillName": "Python for Absolute Beginners",
+    "providerName": "Farzana Sultana",
+    "providerEmail": "farzana@skillswap.com",
+    "price": 10,
+    "rating": 4.7,
+    "slotsAvailable": 6,
+    "description": "Syntax, data types, loops, functions, and small practice problems to build confidence.",
+    "image": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1932",
+    "category": "Programming"
+  },
+  {
+    "id": 6,
+    "skillName": "Data Structures & Algorithms (JavaScript)",
+    "providerName": "Rakibul Islam",
+    "providerEmail": "rakib@skillswap.com",
+    "price": 16,
+    "rating": 4.9,
+    "slotsAvailable": 3,
+    "description": "Arrays, stacks, queues, linked lists, two-pointers, and sorting with interview-style practice.",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+    "category": "DSA"
+  },
+  {
+    "id": 7,
+    "skillName": "Git & GitHub Essentials",
+    "providerName": "Mitu Akter",
+    "providerEmail": "mitu@skillswap.com",
+    "price": 7,
+    "rating": 4.5,
+    "slotsAvailable": 8,
+    "description": "From git init to pull requests—branching, merging, and resolving common conflicts.",
+    "image": "https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=1200&auto=format&fit=crop",
+    "category": "Version Control"
+  },
+  {
+    "id": 8,
+    "skillName": "SQL & Database Basics",
+    "providerName": "Samiul Hasan",
+    "providerEmail": "samiul@skillswap.com",
+    "price": 11,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "SELECT, JOIN, GROUP BY, and normalization concepts using small sample datasets.",
+    "image": "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop",
+    "category": "Database"
+  },
+  {
+    "id": 9,
+    "skillName": "DevOps Basics with CI/CD (Conceptual)",
+    "providerName": "Nayeem Khan",
+    "providerEmail": "nayeem@skillswap.com",
+    "price": 13,
+    "rating": 4.4,
+    "slotsAvailable": 4,
+    "description": "Understand CI/CD pipelines, environment variables, build & deploy flow with simple demos.",
+    "image": "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=1200&auto=format&fit=crop",
+    "category": "DevOps"
+  },
+  {
+    "id": 10,
+    "skillName": "TypeScript for React Developers",
+    "providerName": "Rafi Khan",
+    "providerEmail": "rafi@skillswap.com",
+    "price": 15,
+    "rating": 4.7,
+    "slotsAvailable": 4,
+    "description": "Type basics, interfaces, generics, and adding strong typing to React components.",
+    "image": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop",
+    "category": "Frontend"
+  }
+]

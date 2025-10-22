@@ -1,7 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
 
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+    themes: light --default;
+}
+
+/*@plugin "daisyui/theme" {*/
+/*    name: "light";*/
+/*    default: true;*/
+/*    --color-primary: blue;*/
+/*    --color-secondary: teal;*/
+/*}*/
 
 .maven-pro {
     font-family: "Maven Pro", sans-serif;
