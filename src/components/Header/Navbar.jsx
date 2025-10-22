@@ -1,16 +1,16 @@
-import { Link, NavLink, useNavigate } from "react-router";
+import {Link, NavLink, useNavigate} from "react-router";
 import "./Navbar.css";
-import { useContext } from "react";
+import {useContext} from "react";
 import AuthContext from "../../contexts/AuthContext/AuthContext.jsx";
 
 const Navbar = () => {
-    const { user, userSignOut } = useContext(AuthContext);
+    const {user, userSignOut} = useContext(AuthContext);
     const navigate = useNavigate();
 
     const handleSignOut = () => {
         userSignOut()
             .then(() => {
-                navigate("/", { replace: true });
+                navigate("/", {replace: true});
             })
             .catch(error => {
                 console.log(error.message);
@@ -18,21 +18,21 @@ const Navbar = () => {
     }
 
     const links = <>
-        <NavLink to="/" >
-            {({ isActive }) => (
+        <NavLink to="/">
+            {({isActive}) => (
                 <span className={isActive ? "active" : ""}>Home</span>
             )}
         </NavLink>
         {
             !user && <NavLink to="/signup">
-                {({ isActive }) => (
+                {({isActive}) => (
                     <span className={isActive ? "active" : ""}>Signup</span>
                 )}
             </NavLink>
         }
         {
             user && <NavLink to="/profile">
-                {({ isActive }) => (
+                {({isActive}) => (
                     <span className={isActive ? "active" : ""}>Profile</span>
                 )}
             </NavLink>
@@ -63,24 +63,14 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-5">
-                <div className="dropdown dropdown-end">
-                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                        <div className="w-10 rounded-full">
-                            {
-                                user && <img className="rounded-full border-2"
-                                    alt="Tailwind CSS Navbar component"
-                                    src={user?.photoURL}/>
-                            }
-                        </div>
-                    </div>
-                    <ul
-                        tabIndex="-1"
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Settings</a></li>
-                    </ul>
-                </div>
                 {
-                    user ? <button onClick={handleSignOut} className="btn btn-primary">Logout</button> : <Link to="/login" className="btn btn-primary">Login</Link>
+                    user && <div className="w-10 rounded-full">
+                        <img className="rounded-full border-2" alt="Tailwind CSS Navbar component" src={user?.photoURL}/>
+                    </div>
+                }
+                {
+                    user ? <button onClick={handleSignOut} className="btn btn-primary">Logout</button> :
+                        <Link to="/login" className="btn btn-primary">Login</Link>
                 }
             </div>
         </div>
