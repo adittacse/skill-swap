@@ -65,7 +65,6 @@ const Login = () => {
                             <label className="label">Email</label>
                             <input ref={emailRef} name="email" type="email" className="input" placeholder="Email" required/>
                             {/*password*/}
-                            <label className="label">Password</label>
                             <div className="relative">
                                 <label className="label">Password</label>
                                 <input name="password" type={showPassword ? "text" : "password"} className="input" placeholder="Password" required />
