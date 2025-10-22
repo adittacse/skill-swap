@@ -63,7 +63,6 @@ const Signup = () => {
                             <label className="label">Email</label>
                             <input name="email" type="email" className="input" placeholder="Email"/>
                             {/*password*/}
-                            <label className="label">Password</label>
                             <div className="relative">
                                 <label className="label">Password</label>
                                 <input name="password" type={showPassword ? "text" : "password"} className="input" placeholder="Password" required />
