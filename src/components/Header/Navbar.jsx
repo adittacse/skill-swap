@@ -10,7 +10,7 @@ const Navbar = () => {
     const handleSignOut = () => {
         userSignOut()
             .then(() => {
-                navigate("/");
+                navigate("/", { replace: true });
             })
             .catch(error => {
                 console.log(error.message);
@@ -68,8 +68,8 @@ const Navbar = () => {
                         <div className="w-10 rounded-full">
                             {
                                 user ? <img
-                                    alt="Tailwind CSS Navbar component"
-                                    src={user.photoURL}/>
+                                    alt="Tailwind CSS Navbar component border-2 border-black"
+                                    src={user?.photoURL}/>
                                     : <img
                                         alt="Tailwind CSS Navbar component"
                                         src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"/>

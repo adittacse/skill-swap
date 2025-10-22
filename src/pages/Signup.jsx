@@ -1,12 +1,13 @@
 import { useContext, useState } from "react";
 import AuthContext from "../contexts/AuthContext/AuthContext.jsx";
+import { Link } from "react-router";
 
 const Signup = () => {
     const [success, setSuccess] = useState("");
     const [error, setError] = useState("");
     const { createUser, updateUser, setUser } = useContext(AuthContext);
 
-    const handleSignup = (e) => {
+    const handleSignUp = (e) => {
         e.preventDefault();
         const name = e.target.name.value;
         const photo = e.target.photo.value;
@@ -38,7 +39,7 @@ const Signup = () => {
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                 <div className="card-body">
                     <h1 className="text-3xl font-bold text-center">Signup Here!</h1>
-                    <form onSubmit={handleSignup}>
+                    <form onSubmit={handleSignUp}>
                         <fieldset className="fieldset">
                             {/*name*/}
                             <label className="label">name</label>
@@ -55,6 +56,7 @@ const Signup = () => {
                             <button className="btn btn-neutral mt-4">Register</button>
                         </fieldset>
                     </form>
+                    <p className="font-medium">Already have an account? Please <Link to="/login" className="text-blue-500 underline">Login</Link></p>
                     {
                         success && <p className="text-green-500 font-medium text-center">{success}</p>
                     }
