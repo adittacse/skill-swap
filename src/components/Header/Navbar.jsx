@@ -1,7 +1,11 @@
-import { NavLink } from "react-router";
+import {Link, NavLink} from "react-router";
 import "./Navbar.css";
+import {useContext} from "react";
+import AuthContext from "../../contexts/AuthContext/AuthContext.jsx";
 
 const Navbar = () => {
+    const { user } = useContext(AuthContext);
+
     const links = <>
         <NavLink to="/" >
             {({ isActive }) => (
@@ -53,7 +57,9 @@ const Navbar = () => {
                         <li><a>Settings</a></li>
                     </ul>
                 </div>
-                <button className="btn btn-primary">Login</button>
+                {
+                    user ? <button className="btn btn-primary">Logout</button> : <Link to="/login" className="btn btn-primary">Login</Link>
+                }
             </div>
         </div>
     );
