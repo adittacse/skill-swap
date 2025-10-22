@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import Root from "../layouts/Root.jsx";
 import Home from "../pages/Home.jsx";
+import Signup from "../pages/Signup.jsx";
 
 const Router = createBrowserRouter([
     {
@@ -11,6 +12,10 @@ const Router = createBrowserRouter([
                 index: true,
                 loader: () => fetch("/course.json"),
                 element: <Home />
+            },
+            {
+                path: "signup",
+                element: <Signup />
             },
             {
                 path: "*",

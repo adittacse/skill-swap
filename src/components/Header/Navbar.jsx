@@ -1,10 +1,21 @@
-import {Link, NavLink} from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 import "./Navbar.css";
-import {useContext} from "react";
+import { useContext } from "react";
 import AuthContext from "../../contexts/AuthContext/AuthContext.jsx";
 
 const Navbar = () => {
-    const { user } = useContext(AuthContext);
+    const { user, userSignOut } = useContext(AuthContext);
+    const navigate = useNavigate();
+
+    const handleSignOut = () => {
+        userSignOut()
+            .then(() => {
+                navigate("/");
+            })
+            .catch(error => {
+                console.log(error.message);
+            });
+    }
 
     const links = <>
         <NavLink to="/" >
@@ -12,11 +23,20 @@ const Navbar = () => {
                 <span className={isActive ? "active" : ""}>Home</span>
             )}
         </NavLink>
-        <NavLink to="/profile">
-            {({ isActive }) => (
-                <span className={isActive ? "active" : ""}>Profile</span>
-            )}
-        </NavLink>
+        {
+            !user && <NavLink to="/signup">
+                {({ isActive }) => (
+                    <span className={isActive ? "active" : ""}>Signup</span>
+                )}
+            </NavLink>
+        }
+        {
+            user && <NavLink to="/profile">
+                {({ isActive }) => (
+                    <span className={isActive ? "active" : ""}>Profile</span>
+                )}
+            </NavLink>
+        }
     </>
     return (
         <div className="navbar bg-base-100 shadow-sm">
@@ -46,9 +66,14 @@ const Navbar = () => {
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                            <img
-                                alt="Tailwind CSS Navbar component"
-                                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"/>
+                            {
+                                user ? <img
+                                    alt="Tailwind CSS Navbar component"
+                                    src={user.photoURL}/>
+                                    : <img
+                                        alt="Tailwind CSS Navbar component"
+                                        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"/>
+                            }
                         </div>
                     </div>
                     <ul
@@ -58,7 +83,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 {
-                    user ? <button className="btn btn-primary">Logout</button> : <Link to="/login" className="btn btn-primary">Login</Link>
+                    user ? <button onClick={handleSignOut} className="btn btn-primary">Logout</button> : <Link to="/login" className="btn btn-primary">Login</Link>
                 }
             </div>
         </div>
