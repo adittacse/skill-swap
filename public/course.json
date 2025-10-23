@@ -8,7 +8,7 @@
     "rating": 4.6,
     "slotsAvailable": 6,
     "description": "Start from zero: semantic HTML, responsive layouts, Flexbox, and CSS Grid. Build a small landing page by the end.",
-    "image": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1200&auto=format&fit=crop",
+    "image": "https://i.ibb.co.com/BVZNyY9d/html-css.jpg",
     "category": "Web Development"
   },
   {
@@ -20,7 +20,7 @@
     "rating": 4.7,
     "slotsAvailable": 5,
     "description": "Variables, functions, arrays, objects, and modern ES6 features with short exercises and quizzes.",
-    "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop",
+    "image": "https://i.ibb.co.com/HLcF7MCZ/javascript.jpg",
     "category": "Programming"
   },
   {
@@ -32,7 +32,7 @@
     "rating": 4.8,
     "slotsAvailable": 4,
     "description": "Components, props, state, event handling, and React Router—build a simple SPA from scratch.",
-    "image": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop",
+    "image": "https://i.ibb.co.com/dw4X1kX3/react.jpg",
     "category": "Frontend"
   },
   {
@@ -44,7 +44,7 @@
     "rating": 4.5,
     "slotsAvailable": 5,
     "description": "REST fundamentals, routing, middleware, and CRUD examples on localhost (no external DB required).",
-    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
+    "image": "https://i.ibb.co.com/GQtHHBNQ/nodejs.jpg",
     "category": "Backend"
   },
   {
@@ -56,7 +56,7 @@
     "rating": 4.7,
     "slotsAvailable": 6,
     "description": "Syntax, data types, loops, functions, and small practice problems to build confidence.",
-    "image": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1932",
+    "image": "https://i.ibb.co.com/Ps2rGYbq/python.jpg",
     "category": "Programming"
   },
   {
@@ -68,7 +68,7 @@
     "rating": 4.9,
     "slotsAvailable": 3,
     "description": "Arrays, stacks, queues, linked lists, two-pointers, and sorting with interview-style practice.",
-    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+    "image": "https://i.ibb.co.com/sv5HHd2z/dsa.jpg",
     "category": "DSA"
   },
   {
@@ -80,7 +80,7 @@
     "rating": 4.5,
     "slotsAvailable": 8,
     "description": "From git init to pull requests—branching, merging, and resolving common conflicts.",
-    "image": "https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=1200&auto=format&fit=crop",
+    "image": "https://i.ibb.co.com/1tWsCQwY/github.jpg",
     "category": "Version Control"
   },
   {
@@ -92,7 +92,7 @@
     "rating": 4.6,
     "slotsAvailable": 5,
     "description": "SELECT, JOIN, GROUP BY, and normalization concepts using small sample datasets.",
-    "image": "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop",
+    "image": "https://i.ibb.co.com/mV1PcWJt/sql.jpg",
     "category": "Database"
   },
   {
@@ -104,7 +104,7 @@
     "rating": 4.4,
     "slotsAvailable": 4,
     "description": "Understand CI/CD pipelines, environment variables, build & deploy flow with simple demos.",
-    "image": "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=1200&auto=format&fit=crop",
+    "image": "https://i.ibb.co.com/bMZTT4vL/DevOps.jpg",
     "category": "DevOps"
   },
   {
@@ -116,7 +116,7 @@
     "rating": 4.7,
     "slotsAvailable": 4,
     "description": "Type basics, interfaces, generics, and adding strong typing to React components.",
-    "image": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop",
+    "image": "https://i.ibb.co.com/4qb6Jx9/typescript.jpg",
     "category": "Frontend"
   }
 ]
