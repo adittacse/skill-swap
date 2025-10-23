@@ -12,7 +12,7 @@ const Home = () => {
     const data = useLoaderData();
 
     return (
-        <div>
+        <div className="my-element">
             {/* hero slider */}
             <HeroSlider />
 

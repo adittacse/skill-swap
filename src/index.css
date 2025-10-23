@@ -5,12 +5,10 @@
     themes: light --default;
 }
 
-/*@plugin "daisyui/theme" {*/
-/*    name: "light";*/
-/*    default: true;*/
-/*    --color-primary: blue;*/
-/*    --color-secondary: teal;*/
-/*}*/
+.my-element {
+    animation: bounce;
+    animation-duration: 2s;
+}
 
 .maven-pro {
     font-family: "Maven Pro", sans-serif;
