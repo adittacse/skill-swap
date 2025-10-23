@@ -64,7 +64,7 @@ const Navbar = () => {
                 {
                     user?.photoURL && <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
                         <div className="w-10 rounded-full">
-                            <img className="rounded-full border-2" src={user?.photoURL} alt="user image" />
+                            <img className="rounded-full border-2" src={user?.photoURL || user?.providerData?.[0]?.photoURL} alt="user image" />
                         </div>
                     </div>
                 }

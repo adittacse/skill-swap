@@ -62,8 +62,9 @@ const Signup = () => {
 
     const handleGoogleSignIn = () => {
         googleSignIn()
-            .then(result => {
-                setUser(result.user);
+            .then((result) => {
+                result.user.reload();
+                // setUser(result.user);
                 toast.success("Signed up successfully!");
                 setSuccess("Signed up successfully!");
                 navigate(`${location.state ? location.state : "/"}`);

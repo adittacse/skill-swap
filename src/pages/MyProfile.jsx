@@ -12,7 +12,7 @@ const MyProfile = () => {
     return (
         <div>
             <div className="max-w-lg mx-auto my-10 p-6 border rounded-xl text-center">
-                <img src={user?.photoURL} className="w-24 h-24 rounded-full mx-auto" />
+                <img src={user?.providerData?.[0]?.photoURL} className="w-24 h-24 rounded-full mx-auto" />
                 <h2 className="text-2xl font-bold mt-3">{user?.displayName}</h2>
                 <p className="opacity-80">{user?.email}</p>
                 <Link className="btn btn-primary mt-4" to="/my-profile/update">Update Profile</Link>
