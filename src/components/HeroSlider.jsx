@@ -27,7 +27,7 @@ const slides = [
 
 const HeroSlider = () => {
     return (
-        <div className="my-6">
+        <div className="mb-12">
             <Swiper
                 modules={[Autoplay, Pagination, Navigation]}
                 loop

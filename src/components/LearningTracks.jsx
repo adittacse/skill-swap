@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 const LearningTracks = () => {
     return (
-        <section data-aos="fade-up" className="relative my-12">
+        <section data-aos="fade-up" className="relative mb-12">
             <div className="rounded-3xl border bg-base-100/60 backdrop-blur p-6 md:p-10 shadow-sm">
                 <div className="mb-6 md:mb-8 text-center">
                     <h2 className="text-2xl md:text-3xl font-bold">Learning Tracks</h2>

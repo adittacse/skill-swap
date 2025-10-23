@@ -10,7 +10,7 @@ const Root = () => {
                     <Navbar />
                 </nav>
             </header>
-            <main className="flex-1 container mx-auto px-3 md:px-6 lg:px-8 py-3 md:py-6 lg:py-8">
+            <main className="flex-1 container mx-auto px-3 md:px-6 lg:px-8 py-4">
                 <Outlet />
             </main>
             <Footer />

@@ -23,6 +23,9 @@ const Home = () => {
             {/* top-rated provider */}
             <TopRatedProvider data={data} />
 
+            {/*<div className="border-t border-red-500"></div>*/}
+            {/*<div className="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-gradient-to-r from-sky-500 via-cyan-500 to-emerald-500 opacity-80"/>*/}
+
             {/* how it works */}
             <HowItWorks />
 
