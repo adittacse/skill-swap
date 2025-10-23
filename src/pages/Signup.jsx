@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import AuthContext from "../contexts/AuthContext/AuthContext.jsx";
-import { Link, useNavigate } from "react-router";
+import {Link, useLocation, useNavigate} from "react-router";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { toast, Toaster } from "react-hot-toast";
 
@@ -9,7 +9,9 @@ const Signup = () => {
     const [error, setError] = useState("");
     const [showPassword, setShowPassword] = useState(false);
     const { createUser, updateUser, setUser, googleSignIn } = useContext(AuthContext);
+    const location = useLocation();
     const navigate = useNavigate();
+    console.log(location?.state);
 
     const handleSignUp = (e) => {
         e.preventDefault();
@@ -47,7 +49,7 @@ const Signup = () => {
                         setUser(result.user);
                         toast.success("Signed up successfully!");
                         setSuccess("Signed up successfully!");
-                        navigate("/", {replace: true});
+                        navigate(location?.state || "/", { replace: true });
                     })
                     .catch(error => {
                         setError(error.message);

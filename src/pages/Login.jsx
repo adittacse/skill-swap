@@ -26,7 +26,7 @@ const Login = () => {
                 setUser(result.user);
                 toast.success("Signed in successfully!");
                 setSuccess("Signed in successfully!");
-                navigate(`${location.state ? location.state : "/"}`);
+                navigate(location?.state || "/", { replace: true });
             })
             .catch(error => {
                 setError(error.message);
@@ -41,7 +41,7 @@ const Login = () => {
                 // setUser(result.user);
                 toast.success("Signed in successfully!");
                 setSuccess("Signed in successfully!");
-                navigate(`${location.state ? location.state : "/"}`);
+                navigate(location?.state || "/", { replace: true });
             })
             .catch(error => {
                 setError(error.message);
@@ -90,7 +90,7 @@ const Login = () => {
 
                     <p onClick={handleGoForgotPassword} className="link">Forget Password?</p>
 
-                    <p className="font-medium">New to our website? Please <Link to="/signup" className="text-blue-500 underline">Signup</Link></p>
+                    <p className="font-medium">New to our website? Please <Link state={location?.state} to="/signup" className="text-blue-500 underline">Signup</Link></p>
                     {
                         success && <p className="text-green-500 font-medium text-center">{success}</p>
                     }
