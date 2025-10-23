@@ -35,7 +35,7 @@ const SkillDetailsCard = ({ skillDetails }) => {
                     <hr className="mt-3"/>
                     <p className="mt-2"><span className="font-bold">Category:</span> {category}</p>
                     <p className="mt-1"><span className="font-bold">Provider:</span> {providerName} ({providerEmail})</p>
-                    <div className="flex items-center gap-5 mt-1">
+                    <div className="flex items-center mt-1">
                         <p className="font-bold">Rating:</p>
                         <div className="flex items-center gap-1 text-warning">
                             {

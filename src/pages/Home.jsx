@@ -32,8 +32,6 @@ const Home = () => {
 
             {/* personal extra section */}
             <LearningTracks />
-
-            {/*<Toaster />*/}
         </div>
     );
 };
