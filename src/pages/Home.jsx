@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router";
 import PopularSkills from "../components/PopularSkills.jsx";
 import Loading from "../components/Loading.jsx";
 import HeroSlider from "../components/HeroSlider.jsx";
+import TopRatedProvider from "../components/TopRatedProvider.jsx";
 
 const Home = () => {
     const data = useLoaderData();
@@ -18,6 +19,8 @@ const Home = () => {
             </Suspense>
 
             {/* top-rated provider */}
+            <TopRatedProvider data={data} />
+
             {/* how it works */}
             {/* personal extra section */}
         </div>
