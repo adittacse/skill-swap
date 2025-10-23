@@ -33,7 +33,7 @@ const Home = () => {
             {/* personal extra section */}
             <LearningTracks />
 
-            <Toaster />
+            {/*<Toaster />*/}
         </div>
     );
 };

@@ -2,7 +2,7 @@ import { useContext, useRef, useState } from "react";
 import AuthContext from "../contexts/AuthContext/AuthContext.jsx";
 import { Link, Navigate, useLocation, useNavigate } from "react-router";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { toast, Toaster } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 
 const Login = () => {
     const [success, setSuccess] = useState("");
@@ -99,8 +99,6 @@ const Login = () => {
                     }
                 </div>
             </div>
-
-            <Toaster />
         </div>
     );
 };
