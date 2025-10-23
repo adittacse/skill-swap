@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import AuthContext from "../contexts/AuthContext/AuthContext.jsx";
-import {Link, useLocation, useNavigate} from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { toast, Toaster } from "react-hot-toast";
 
@@ -11,7 +11,6 @@ const Signup = () => {
     const { createUser, updateUser, setUser, googleSignIn } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
-    console.log(location?.state);
 
     const handleSignUp = (e) => {
         e.preventDefault();

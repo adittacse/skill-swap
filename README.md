@@ -1,16 +1,35 @@
-# React + Vite
+# SkillSwap – Local Skill Exchange
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beginner-friendly SPA to browse local skills (courses), view course details (private), and manage auth (login, signup, Google, reset
+password). No backend.
 
-Currently, two official plugins are available:
+## Live URL
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+https://skill-swap-838a8.web.app/
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Hero slider, Popular skills, Top providers, How it works, Learning tracks.
+- Skill details page (protected) with simple booking form + toast.
+- Auth: Email/Password + Google, password reset, profile update.
+- Responsive for mobile, tablet and desktop.
 
-## Expanding the ESLint configuration
+## Tech & NPM Packages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React + Vite, React Router
+- Tailwind CSS + DaisyUI (UI components)
+- React Icons
+- Firebase Auth
+- Swiper (hero slider)
+- Animate.css
+- React Hot Toast (notifications)
+
+## Environment Variables
+
+Created `.env.local` and fill Firebase secrete keys.
+
+## Run
+
+```bash
+npm install
+npm run dev
