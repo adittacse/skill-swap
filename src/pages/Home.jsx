@@ -6,6 +6,7 @@ import PopularSkills from "../components/PopularSkills.jsx";
 import TopRatedProvider from "../components/TopRatedProvider.jsx";
 import HowItWorks from "../components/HowItWorks.jsx";
 import LearningTracks from "../components/LearningTracks.jsx";
+import { Toaster } from "react-hot-toast";
 
 const Home = () => {
     const data = useLoaderData();
@@ -31,6 +32,8 @@ const Home = () => {
 
             {/* personal extra section */}
             <LearningTracks />
+
+            <Toaster />
         </div>
     );
 };
