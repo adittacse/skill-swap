@@ -5,6 +5,7 @@ import Loading from "../components/Loading.jsx";
 import PopularSkills from "../components/PopularSkills.jsx";
 import TopRatedProvider from "../components/TopRatedProvider.jsx";
 import HowItWorks from "../components/HowItWorks.jsx";
+import LearningTracks from "../components/LearningTracks.jsx";
 
 const Home = () => {
     const data = useLoaderData();
@@ -26,6 +27,7 @@ const Home = () => {
             <HowItWorks />
 
             {/* personal extra section */}
+            <LearningTracks />
         </div>
     );
 };
