@@ -4,7 +4,7 @@ import Footer from "../components/Footer/Footer.jsx";
 
 const Root = () => {
     return (
-        <div className="maven-pro min-h-screen flex flex-col">
+        <div className="maven-pro min-h-screen flex flex-col w-11/12 mx-auto">
             <header>
                 <nav>
                     <Navbar />
