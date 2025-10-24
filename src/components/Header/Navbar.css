@@ -1,9 +1,14 @@
 a.active {
-    color: red;
-}
-
-a.pending {
-    color: blue;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: #9F62F2;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    background: linear-gradient(90deg, #632ee3 0%, #9f62f2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
 }
 
 a.transitioning {
