@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute.jsx";
 import MyProfile from "../pages/MyProfile.jsx";
 import UpdateProfile from "../pages/UpdateProfile.jsx";
 import ForgotPassword from "../pages/ForgotPassword.jsx";
+import ErrorPage from "../pages/ErrorPage.jsx";
 
 const Router = createBrowserRouter([
     {
@@ -51,7 +52,7 @@ const Router = createBrowserRouter([
             },
             {
                 path: "*",
-                element: <p>404 Not Found</p>
+                element: <ErrorPage />
             }
         ]
     }
