@@ -10,6 +10,7 @@ import MyProfile from "../pages/MyProfile.jsx";
 import UpdateProfile from "../pages/UpdateProfile.jsx";
 import ForgotPassword from "../pages/ForgotPassword.jsx";
 import ErrorPage from "../pages/ErrorPage.jsx";
+import AllSkills from "../pages/AllSkills.jsx";
 
 const Router = createBrowserRouter([
     {
@@ -20,6 +21,12 @@ const Router = createBrowserRouter([
                 index: true,
                 loader: () => fetch("/course.json"),
                 element: <Home />,
+                hydrateFallbackElement: <Loading />
+            },
+            {
+                path: "all-skills",
+                loader: () => fetch("/course.json"),
+                element: <AllSkills />,
                 hydrateFallbackElement: <Loading />
             },
             {

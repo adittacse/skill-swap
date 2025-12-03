@@ -1,14 +1,21 @@
 import CourseCard from "./CourseCard.jsx";
+import {Link} from "react-router";
 
 const PopularSkills = ({ data }) => {
+    const first4Data = data.slice(0, 4);
 
     return (
         <div className="mb-12">
             <h2 className="text-4xl text-center font-bold mb-8">Popular Skills</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
                 {
-                    data.map(course => <CourseCard key={course.id} course={course} />)
+                    first4Data.map(course => <CourseCard key={course.id} course={course} />)
                 }
+            </div>
+
+            <div className="flex justify-center">
+                <Link to="/all-skills" className="btn btn-primary">See More Skills</Link>
             </div>
         </div>
     );
