@@ -1,5 +1,5 @@
 import CourseCard from "./CourseCard.jsx";
-import {Link} from "react-router";
+import { Link } from "react-router";
 
 const PopularSkills = ({ data }) => {
     const first4Data = data.slice(0, 4);
